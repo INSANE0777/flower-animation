@@ -160,22 +160,23 @@ const MultipleRoses = () => {
   ];
 
   return (
-    <motion.svg
-      width="600"
-      height="600"
-      viewBox="0 0 600 600"
-      style={{ overflow: "visible" }}
-    >
-      {roses.map((rose, idx) => (
-        <Rose
-          key={idx}
-          x={rose.x}
-          y={rose.y}
-          scale={rose.scale}
-          delayOffset={rose.delay}
-        />
-      ))}
-    </motion.svg>
+    <div className="w-full h-full">
+      <motion.svg
+        className="w-full h-full"
+        viewBox="0 0 600 600"
+        style={{ overflow: "visible" }}
+      >
+        {roses.map((rose, idx) => (
+          <Rose
+            key={idx}
+            x={rose.x}
+            y={rose.y}
+            scale={rose.scale}
+            delayOffset={rose.delay}
+          />
+        ))}
+      </motion.svg>
+    </div>
   );
 };
 
